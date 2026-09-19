@@ -12,6 +12,12 @@ Portfolio project: a Node.js API gateway in front of a Python FastAPI service th
 
 Early scaffolding, not functional yet.
 
+## Corpus
+
+The RAG corpus isn't included in this repo (it's personal/work docs, gitignored
+under `python-service/corpus/`). To run this end-to-end yourself, drop your own
+markdown docs in there and point the service at them.
+
 ## Local dev
 
 ```
