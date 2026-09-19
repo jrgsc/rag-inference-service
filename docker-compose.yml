@@ -1,0 +1,16 @@
+services:
+  node-gateway:
+    build: ./node-gateway
+    ports:
+      - "3000:3000"
+    environment:
+      - PYTHON_SERVICE_URL=http://python-service:8000
+    depends_on:
+      - python-service
+
+  python-service:
+    build: ./python-service
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env

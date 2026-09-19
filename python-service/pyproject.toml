@@ -1,0 +1,15 @@
+[project]
+name = "rag-python-service"
+version = "0.1.0"
+description = "Python inference service for the RAG portfolio project"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "anthropic>=0.40",
+    "python-dotenv>=1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
