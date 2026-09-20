@@ -28,7 +28,7 @@ services:
     env_file:
       - .env
     volumes:
-      - ./python-service/corpus:/app/corpus:ro
+      - ./python-service/dataset:/app/dataset:ro
       - ./python-service/.chroma:/app/.chroma
 
   redis:

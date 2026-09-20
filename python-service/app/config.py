@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DATASET_DIR = Path(os.getenv("DATASET_DIR", "corpus/fb5.wiki"))
+DATASET_DIR = Path(os.getenv("DATASET_DIR", "dataset/fb5.wiki"))
 CHROMA_DIR = Path(os.getenv("CHROMA_DIR", ".chroma"))
 COLLECTION_NAME = "wiki_docs"
 

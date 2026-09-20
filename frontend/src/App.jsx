@@ -46,7 +46,7 @@ export default function App() {
   return (
     <div className="app">
       <h1>RAG Search</h1>
-      <p className="subtitle">ask a question, get an answer pulled from the wiki corpus</p>
+      <p className="subtitle">ask a question, get an answer pulled from the wiki dataset</p>
 
       <form onSubmit={handleSubmit}>
         <input
