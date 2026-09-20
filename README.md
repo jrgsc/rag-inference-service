@@ -51,3 +51,20 @@ Rate limit is 20 requests/min per gateway instance. Identical questions are cach
 
 Gateway health check: http://localhost:3000/health
 Python service health check: http://localhost:8000/health
+
+## Lint & tests
+
+Gateway (from `node-gateway/`):
+
+```
+npm run lint
+npm test
+```
+
+Python service (from `python-service/`, with the venv active or via `.venv/Scripts/`):
+
+```
+pip install -e ".[dev]"
+ruff check .
+pytest
+```

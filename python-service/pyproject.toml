@@ -12,9 +12,18 @@ dependencies = [
     "voyageai>=0.3",
 ]
 
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.7"]
+
 [tool.hatch.build.targets.wheel]
 packages = ["app"]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
