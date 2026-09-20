@@ -5,8 +5,11 @@ services:
       - "3000:3000"
     environment:
       - PYTHON_SERVICE_URL=http://python-service:8000
+      - REDIS_URL=redis://redis:6379
+      - GATEWAY_API_KEY=${GATEWAY_API_KEY}
     depends_on:
       - python-service
+      - redis
 
   python-service:
     build: ./python-service
@@ -17,3 +20,8 @@ services:
     volumes:
       - ./python-service/corpus:/app/corpus:ro
       - ./python-service/.chroma:/app/.chroma
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
