@@ -9,7 +9,11 @@ dependencies = [
     "anthropic>=0.40",
     "python-dotenv>=1.0",
     "chromadb>=0.5",
+    "voyageai>=0.3",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
 
 [build-system]
 requires = ["hatchling"]
