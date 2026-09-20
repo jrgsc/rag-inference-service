@@ -1,4 +1,14 @@
 services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_GATEWAY_API_KEY=${GATEWAY_API_KEY}
+      - GATEWAY_URL=http://node-gateway:3000
+    depends_on:
+      - node-gateway
+
   node-gateway:
     build: ./node-gateway
     ports:

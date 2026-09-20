@@ -6,12 +6,12 @@ from . import config
 
 def load_docs():
     docs = []
-    for path in config.CORPUS_DIR.rglob("*.md"):
+    for path in config.DATASET_DIR.rglob("*.md"):
         if ".git" in path.parts or ".attachments" in path.parts:
             continue
         text = path.read_text(encoding="utf-8", errors="ignore")
         if text.strip():
-            docs.append((str(path.relative_to(config.CORPUS_DIR)), text))
+            docs.append((str(path.relative_to(config.DATASET_DIR)), text))
     return docs
 
 
